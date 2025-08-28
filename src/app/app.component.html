@@ -1,0 +1,30 @@
+<nav class="docs-navbar-header">
+    <div class="ex2">Fidelity Demo Project</div>
+ </nav> 
+<mat-sidenav-container class="sidenav-fab-container" fullscreen>
+	<mat-sidenav #sidenav mode="side" opened="true">
+		<nav>
+			<h3>Fidelity</h3>
+			<div class="ex1">
+				<p>
+					<a routerLink="/file-upload" routerLinkActive="router-link-active" #rla="routerLinkActive">FileUpload</a>
+        </p>
+				<p>
+					<a [routerLink]="['/show-record']" routerLinkActive="router-link-active" #rla="routerLinkActive">List View</a>
+        </p>
+
+		<p>
+					<a [routerLink]="['/activity-feed']" routerLinkActive="router-link-active" #rla="routerLinkActive">Activity Feed View</a>
+        </p>
+			</div>
+		</nav>
+	</mat-sidenav>
+
+	<mat-sidenav-content>
+		<div class="main-content">
+			<router-outlet></router-outlet>
+		</div>
+	</mat-sidenav-content>
+
+</mat-sidenav-container>
+
